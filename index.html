@@ -19,8 +19,8 @@
           </p>
         </header>
 
-        <div class="border">
-          <main>
+        <main>
+          <div class="border">
             <form id="survey-form">
               <div class="form-group">
                 <h1 class="title-name">Relationship Questionnaire</h1>
@@ -56,29 +56,23 @@
                     id="number"
                     type="number"
                     name="age"
+                    min="10"
+                    max="99"
                     placeholder="Enter your age"
                     required
                 /></label>
               </div>
 
               <div class="form-group">
-                <label for="role" id="name-label"
-                  >What is your role?<input
-                    id="dropdown"
-                    name="role"
-                    list="role"
-                    placeholder="Select current role"
-                    required
-                  />
-                  <datalist id="role" name="role">
-                    <option disabled selected value>Select Your role</option>
-                    <option value="Student">Student</option>
-                    <option value="Full Time Job">Full Time Job</option>
-                    <option value="Full Time Learner">Full Time Learner</option>
-                    <option value="Prefer not to say">Prefer not to say</option>
-                    <option value="Other">Other</option>
-                  </datalist>
-                </label>
+                <p>What is your role?</p>
+                <select id="dropdown" name="role" class="form-control" required>
+                  <option disabled selected value>Select Your role</option>
+                  <option value="Student">Student</option>
+                  <option value="Full Time Job">Full Time Job</option>
+                  <option value="Full Time Learner">Full Time Learner</option>
+                  <option value="Prefer not to say">Prefer not to say</option>
+                  <option value="Other">Other</option>
+                </select>
               </div>
 
               <div class="gender-container">
@@ -86,16 +80,14 @@
                 <ul>
                   <li id="female">
                     <label for="gender" id="gender-label">
-                      <input type="radio" name="gender" />Female
+                      <input type="radio" name="gender" value="female" />Female
                     </label>
                   </li>
                   <li id="male">
-                    <div class="male-bg">
-                      <label for="gender" id="gender-label">
-                        <input type="radio" name="gender" required />
-                        Male
-                      </label>
-                    </div>
+                    <label for="gender" id="gender-label">
+                      <input type="radio" name="gender" value="male" required />
+                      Male
+                    </label>
                   </li>
                 </ul>
               </div>
@@ -107,14 +99,25 @@
                     id="d1"
                     type="radio"
                     name="radio"
+                    value="definitely"
                     checked
                   />Definitely</label
                 >
                 <label for="radio"
-                  ><input id="d2" type="radio" name="radio" />Maybe</label
+                  ><input
+                    id="d2"
+                    type="radio"
+                    name="radio"
+                    value="maybe"
+                  />Maybe</label
                 >
                 <label for="radio"
-                  ><input id="d3" type="radio" name="radio" />Not sure</label
+                  ><input
+                    id="d3"
+                    type="radio"
+                    name="radio"
+                    value="not sure"
+                  />Not sure</label
                 >
               </div>
 
@@ -158,8 +161,8 @@
                 <button type="submit" id="submit">Submit</button>
               </div>
             </form>
-          </main>
-        </div>
+          </div>
+        </main>
       </div>
     </div>
   </body>
